@@ -1,9 +1,12 @@
+#ifndef _HOLBERTON_H_
+#define _HOLBERTON_H_
+
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
  *
- * Return: On success 
- * On error,  is returned, and error is set appropriately.
+ * Return: On success 1.
+ * On error, -1 is returned, and error is set appropriately.
  */
 
 int _putchar(char c);
@@ -98,4 +101,4 @@ void print_to_98(int n);
 
 void print_times_table(int n);
 
-
+#endif
