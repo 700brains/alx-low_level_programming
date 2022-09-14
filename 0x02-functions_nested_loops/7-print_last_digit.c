@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
  * print_last_digit - print last digit of integer
@@ -6,15 +6,12 @@
  * Return: last digit of number
  */
 
-int print_last_digit(int num)
+int print_last_digit(int n)
 {
-
-	int n = num % 10;
-	
 	if (n < 0)
-		n = -n;
+		n *= -1;
 
-       	_putchar(n + '0');
+       	_putchar('0' + (n % 10));
 
-	return (n);
+	return (n % 10);
 }
