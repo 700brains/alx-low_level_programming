@@ -11,18 +11,19 @@
 int password(int password) {
 char list[] = "1234567890qwertyuiopasdfghjklzxcvbnm!QWERTYUIOPASDFGHJKLZXCVBNM";
 printf("\t");
-for(int i = 0; i < password; i++) {
+int i;
+for(i = 0; i < password; i++) {
     printf("*");
 }
 printf("\n");
 printf("\t");
 srand(time(NULL));
-for(int i = 0; i < password; i++) {
+for(i = 0; i < password; i++) {
     printf("%c", list[rand() % (sizeof list - 1)]);
 }
 printf("\n");
 printf("\t");
-for(int i = 0; i < password; i++) {
+for(i = 0; i < password; i++) {
     printf("*");
 }
 printf("\n");
