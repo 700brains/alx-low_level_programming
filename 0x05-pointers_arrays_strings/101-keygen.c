@@ -9,7 +9,7 @@
  */
 
 int password(int password) {
-char list[] = "1234567890qwertyuiopasdfghjklzxcvbnm!@#$%^&*()_- +=QWERTYUIOPASDFGHJKLZXCVBNM[]{};':\"<>,.?/\|";
+char list[] = "1234567890qwertyuiopasdfghjklzxcvbnm!QWERTYUIOPASDFGHJKLZXCVBNM";
 printf("\t");
 for(int i = 0; i < password; i++) {
     printf("*");
