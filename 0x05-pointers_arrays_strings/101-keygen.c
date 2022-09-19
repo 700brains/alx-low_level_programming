@@ -5,10 +5,10 @@
 /**
  * password - generates a random password
  * @password: int
- * Return: 0
+ * Return: void
  */
 
-int password(int password) {
+void password(int password) {
 char list[] = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
 printf("\t");
 int i,j,k;
