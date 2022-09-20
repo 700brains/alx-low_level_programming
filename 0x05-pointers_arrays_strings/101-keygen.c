@@ -8,13 +8,13 @@
  * Return: void
  */
 
-void password(){
+void password(void)
+{
 
 
-	
 	srand(time(NULL));
-	char list[] = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
-	list[rand() % (sizeof list - 1)];
+	//char list[] = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+	//list[rand() % (sizeof list - 1)];
 	printf("Tada! Congrats");
 
 }
