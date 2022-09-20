@@ -4,19 +4,18 @@
 
 /**
  * password - generates a random password
- * @password: int
+ * 
  * Return: void
  */
 
-void password(int password) {
+void password(){
 
 
 	int j;
 	srand(time(NULL));
-	for(j = 0; j < password; j++)
-	{
-		printf("Tada! Congrats");
-	}
+	char list[] = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+	list[rand() % (sizeof list - 1)];
+	printf("Tada! Congrats");
 
 }
 
@@ -28,15 +27,10 @@ void password(int password) {
  *
  * Return: 0 for success
 */
-int main(void) {
-int password_length;
-printf("\n\t*********************************\n\n");
-printf("\tWelcome to the password generator\n\n");
-printf("\t*********************************\n");
-printf("\n\tEnter length of the password = ");
-scanf("%d", &password_length);
-printf("\n");
-printf("\n");
-password(password_length);
-return 0;
+int main(void)
+{
+
+	password();
+	
+	return 0;
 }
