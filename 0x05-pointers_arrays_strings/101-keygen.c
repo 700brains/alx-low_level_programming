@@ -14,25 +14,21 @@ void password(int password) {
 	int k;
 	int j;
 	char list[] = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
-printf("\t");
 
-for(i = 0; i < password; i++) {
-    printf("*");
-}
-printf("\n");
-printf("\t");
 srand(time(NULL));
 
 for(j = 0; j < password; j++) {
-    printf("%c", list[rand() % (sizeof list - 1)]);
+    k = list[rand() % (sizeof list - 1)];
 }
+printf("Tada! Congrats");
+/*
 printf("\n");
 printf("\t");
-
-for(k = 0; k < password; k++) {
+*/
+/*for(k = 0; k < password; k++) {
     printf("*");
-}
-printf("\n");
+}*/
+/*printf("\n");*/
 }
 
 /**
