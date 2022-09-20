@@ -11,7 +11,7 @@
 void password(){
 
 
-	int j;
+	
 	srand(time(NULL));
 	char list[] = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
 	list[rand() % (sizeof list - 1)];
