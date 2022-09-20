@@ -11,7 +11,9 @@
 void password(int password) {
 char list[] = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
 printf("\t");
-int i,j,k;
+int i;
+int j;
+int k;
 for(i = 0; i < password; i++) {
     printf("*");
 }
