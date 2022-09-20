@@ -12,13 +12,11 @@ void password(int password) {
 
 
 	int j;
-	char list[] = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
-
-srand(time(NULL));
-
-for(j = 0; j < password; j++) {
-printf("Tada! Congrats");
-}
+	srand(time(NULL));
+	for(j = 0; j < password; j++)
+	{
+		printf("Tada! Congrats");
+	}
 
 }
 
