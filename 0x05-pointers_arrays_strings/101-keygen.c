@@ -10,25 +10,16 @@
 
 void password(int password) {
 
-	int i;
-	int k;
+
 	int j;
 	char list[] = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
 
 srand(time(NULL));
 
 for(j = 0; j < password; j++) {
-    k = list[rand() % (sizeof list - 1)];
-}
 printf("Tada! Congrats");
-/*
-printf("\n");
-printf("\t");
-*/
-/*for(k = 0; k < password; k++) {
-    printf("*");
-}*/
-/*printf("\n");*/
+}
+
 }
 
 /**
