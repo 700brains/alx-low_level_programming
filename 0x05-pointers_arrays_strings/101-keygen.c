@@ -9,11 +9,13 @@
  */
 
 void password(int password) {
-char list[] = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+
+	int i;
+	int k;
+	int j;
+	char list[] = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
 printf("\t");
-int i;
-int j;
-int k;
+
 for(i = 0; i < password; i++) {
     printf("*");
 }
