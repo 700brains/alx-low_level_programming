@@ -1,32 +1,49 @@
-include "main.h"
-
+#include "main.h"
 
 /**
- * _strspn - get length of a prefix substring
- * @s: string
- * @accept: bytes being compared
- * Description: finds number of bytes required to find accept in s
- * Return: bytes required to find accept
- **/
+ * _strspn - Locates a character in a string
+ * @s: This is the main C string to be scanned.
+ * @accept: This is the string containing the list of characters to match in s
+ * Return: return count
+ */
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int i, j, exit;
 
-	for (i = 0; s[i] != '\0'; i++)
+	int i, j;
+
+	int night = 0;
+
+	char *str1, *str2;
+
+	str1 = s;
+	str2 = accept;
+
+	i = 0;
+
+	while (str1[i] != '\0')
 	{
-		exit = 0;
-		for (j = 0; accept[j] != '\0'; j++)
+		j = 0;
+
+
+		while (str2[j] != '\0')
 		{
-			if (accept[j] == s[i])
+			if (str2[j] == str1[i])
 			{
-				exit = 1;
+				night++;
+				break;
+
 			}
+			j++;
 		}
-		if (exit == 0)
+		if (s[i] != accept[j])
+
 		{
-			return (i);
+			break;
+
 		}
+		i++;
 	}
-	return (i);
+	return (night); /*return the value of night*/
+
 }
