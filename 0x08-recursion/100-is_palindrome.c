@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio>
 
 /**
  * substring_match - check if a substring after wildcard matches s1
