@@ -1,45 +1,56 @@
 #include "main.h"
-#include <stdio>
 
 /**
- * substring_match - check if a substring after wildcard matches s1
- * @s1: one string
- * @s2: one string
- * @after_wldcd: placeholder for position right after wildcard
- * Return: 1 if matched, 0 if not
- */
+* _strlen - returns the length of a string
+* @s: a string given by main
+*
+* Description: This will use recursion and no loops
+*	to achieve a goal or mimic a function
+* Return: it returns the string length
+*/
 
-int substring_match(char *s1, char *s2, char *after_wldcd)
+int _strlen(char *s)
 {
-	if (*s1 == '\0' && *s2 == '\0')
-		return (1);
-	if (*s1 == '\0' && *s2 == '*')
-		return (substring_match(s1, s2 + 1, s2 + 1));
-	if (*s1 == '\0' && *s2 != '\0')
+	if (*s == 0)
 		return (0);
-	if (*s2 == '*')
-		return (substring_match(s1, s2 + 1, s2 + 1));
-	if (*s1 == *s2)
-		return (substring_match(s1 + 1, s2 + 1, after_wldcd));
-	else
-		return (substring_match(s1 + 1, after_wldcd, after_wldcd));
+	return (1 + _strlen(s + 1));
 }
 
-/**
- * wildcmp - compare if string with wildcard mattches
- * @s1: one string
- * @s2: one string
- * Return: 1 if matched, 0 if not
- */
 
-int wildcmp(char *s1, char *s2)
+/**
+* check_it - this will do all the work
+* @s: the char string
+* @i: the beignning of the string
+* @j: the end of the string
+*
+* Description: this loops back if the two index values
+* Return: this returns as a recursive function
+*	or it returns 1 or 0 depending on the if statements
+*/
+int check_it(char *s, int i, int j)
 {
-	if (*s1 == '\0' && *s2 == '\0')
+	if (i >= j || s[i] == 0)
 		return (1);
-	if (*s1 == *s2)
-		return (wildcmp(s1 + 1, s2 + 1));
-	else if (*s2 == '*')
-		return (substring_match(s1, (s2 + 1), (s2 + 1)));
-	else
+	if (*s != 0 && s[i] != s[j])
 		return (0);
+	return (check_it(s, i + 1, j - 1));
+}
+
+
+/**
+* is_palindrome - calls on my helper function check_it
+* @s: the char string
+*
+* Description: this will return 1 if the string is 0 or 1 in length
+*	if it is longer we call on the helper function and use their return
+* Return: either 1 or 0 dpeenind on if it is a palindrome
+*/
+
+int is_palindrome(char *s)
+{
+	int j = (_strlen(s));
+
+	if (j == 0 || j == 1)
+		return (1);
+	return (check_it(s, 0, j - 1));
 }
