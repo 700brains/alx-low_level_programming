@@ -3,16 +3,17 @@
 
 /**
  * main - prints program name, followed bt a new line
- * @argc: int
- * @argv: list
- * Return 0
+ * @argc: argument counter
+ * @argv: pointer to array of arguments
+ * Return 0 on sucess
  */
 
 
 int main(int argc, char *argv[])
 {
-	printf("%s\n", argv[0]);
-	argc = argc;
+	if(argc > 0)
+		printf("%s\n", argv[0]);
+	
 
 	return (0);
 
